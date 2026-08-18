@@ -1,0 +1,72 @@
+{
+  "sprint": "RC-SMS-1.9.6",
+  "release": "3.20.71",
+  "title": "Shared Number Operations Certification",
+  "status": "complete",
+  "certificationScope": "pre_port_application",
+  "certificationSchema": "1.0",
+  "liveConversationSchema": "1.6",
+  "orchestrationSchema": "1.2",
+  "outboundRegistrySchema": "1.2",
+  "consentSchema": "1.0",
+  "carrierCertification": "pending_rc_sms_1_10",
+  "principles": [
+    "One sender/recipient relationship remains authoritative across workflows.",
+    "Persistent owner and temporary reply routing remain independent.",
+    "Global consent gates every programmatic send and retry.",
+    "Unknown or manual outbound activity fails producer-safe.",
+    "Certification is non-destructive and does not manufacture production SMS traffic."
+  ],
+  "hardening": {
+    "completedWorkflowExplicitReentryCreatesNewEpisode": true,
+    "oldAnswersResetOnExplicitReentry": true,
+    "producerReleaseResumesActiveCoverageFit": true,
+    "producerReleaseHonorsSuppression": true,
+    "legacyOptedOutPreservesPreTakeoverState": true,
+    "naturalHomeCoverageReviewIntentSupported": true
+  },
+  "operationsSnapshot": {
+    "nonDestructive": true,
+    "runtimeConfigurationStatus": true,
+    "webhookHealthEvidence": true,
+    "retryEvidence": true,
+    "storageEvidence": true,
+    "secretValuesExposed": false,
+    "carrierBoundary": "RC-SMS-1.10"
+  },
+  "storage": {
+    "newTableRequired": false,
+    "migrationRequired": false,
+    "legacyLazyNormalization": true,
+    "fixtures": [
+      "fixtures/rc-sms-1.9.6/legacy-pre-orchestrator.json",
+      "fixtures/rc-sms-1.9.6/legacy-producer-takeover.json",
+      "fixtures/rc-sms-1.9.6/legacy-opted-out.json"
+    ]
+  },
+  "requiredScenarioMatrix": [
+    "CoverageFit send/reply continuity",
+    "manual producer takeover preserves exact workflow step",
+    "customer reply to producer remains bot-silent",
+    "appointment automation does not false-trigger manual takeover",
+    "appointment reply follows declared context",
+    "CRM quote follow-up does not launch CoverageFit",
+    "CRM reply follows producer/quote context",
+    "existing service request avoids CoverageFit menu",
+    "fresh explicit homebuyer request launches CoverageFit",
+    "fresh ambiguous greeting routes producer-safe",
+    "STOP globally suppresses programmatic outbound",
+    "START restores permission only",
+    "unknown outbound becomes producer-safe",
+    "duplicate webhook is idempotent",
+    "retry preserves source and ownership",
+    "completed customer explicit new review creates a new workflow episode on the same relationship",
+    "producer release resumes the correct preserved CoverageFit workflow"
+  ],
+  "secretHygiene": {
+    "committedEnvFilesAllowed": false,
+    "privateRingCentralSecretNamesAllowedInPublicClient": false,
+    "operationsSnapshotReturnsSecretValues": false
+  },
+  "nextSprint": "RC-SMS-1.10 — 408-FARMERS Port + Live Carrier Certification"
+}

@@ -1,0 +1,27 @@
+{
+  "sprint": "RC-SMS-1.9.5",
+  "release": "3.20.70",
+  "title": "Global Consent + Suppression Boundary",
+  "status": "complete",
+  "liveConversationSchema": "1.6",
+  "orchestrationSchema": "1.2",
+  "outboundRegistrySchema": "1.2",
+  "consentSchema": "1.0",
+  "consentStatus": ["active", "opted_out"],
+  "providerStatus": ["unknown", "active", "opted_out", "blocked"],
+  "consentSources": ["legacy", "customer_command", "provider", "producer", "system"],
+  "sendClasses": ["automated", "human_initiated"],
+  "rules": {
+    "stopIsGlobal": true,
+    "executionTimeRecheck": true,
+    "startRestoresPermissionOnly": true,
+    "startRestartsCoverageFit": false,
+    "providerSuppressionForcesLocalSuppression": true,
+    "providerActiveOverridesCustomerStop": false,
+    "producerMayBypassSuppression": false,
+    "manualRingCentralOutboundClearsConsent": false,
+    "newD1TableRequired": false,
+    "newEnvironmentVariableRequired": false
+  },
+  "nextSprint": "RC-SMS-1.9.6"
+}

@@ -1,0 +1,64 @@
+{
+  "sprint": "RC-SMS-1.9.4",
+  "name": "Cross-Workflow Ownership + Producer Continuity",
+  "release": "3.20.69",
+  "status": "complete",
+  "liveConversationSchema": "1.5",
+  "orchestrationSchema": "1.1",
+  "storage": {
+    "existingTable": "sms_conversations",
+    "newTableRequired": false,
+    "migrationRequired": false
+  },
+  "ownershipOperations": ["acquire", "transfer", "pause", "resume", "release", "close"],
+  "owners": ["none", "coveragefit", "producer", "service", "life", "commercial", "appointment", "system"],
+  "automationModes": ["automated", "assist_only", "human_only", "suppressed"],
+  "producerActions": [
+    "take_ownership",
+    "return_to_coveragefit",
+    "pause_automation",
+    "resume_workflow",
+    "close_workflow",
+    "start_workflow",
+    "transfer_ownership",
+    "release_ownership",
+    "clear_reply_context"
+  ],
+  "legacyProducerActionsPreserved": ["pause", "resume", "resend_handoff", "complete", "not_proceeding"],
+  "replyContext": {
+    "separateFromOwner": true,
+    "defaultTtlSeconds": 172800,
+    "minimumTtlSeconds": 300,
+    "maximumTtlSeconds": 604800,
+    "routes": ["coveragefit", "producer", "service", "life", "commercial", "appointment", "system", "none"]
+  },
+  "gatewayOwnershipEffects": ["preserve", "producer", "transfer", "release"],
+  "gatewayAddedFields": ["ownershipTarget", "replyContext", "replyContextTtlSeconds"],
+  "workflowEpisodes": {
+    "maxRetained": 20,
+    "sameChannelRelationship": true,
+    "containsLeadPii": false,
+    "fields": ["id", "type", "status", "state", "startedAt", "endedAt", "outcome", "ownerAtEnd"]
+  },
+  "producerStartWorkflows": [
+    "coveragefit_homebuyer",
+    "coveragefit_home_review",
+    "coveragefit_bundle",
+    "coveragefit_other",
+    "quote_followup",
+    "service",
+    "appointment",
+    "life",
+    "commercial",
+    "system"
+  ],
+  "safety": {
+    "manualOutboundTakesProducerOwnership": true,
+    "manualOutboundClearsStaleReplyContext": true,
+    "exactCoverageFitStatePreservedAcrossTakeover": true,
+    "specializedRoutesAutoReply": false,
+    "unknownInboundFailsProducerSafe": true,
+    "parallelLiveCustomerRecordAllowed": false
+  },
+  "next": "RC-SMS-1.9.5 — Global Consent + Suppression Boundary"
+}
