@@ -1,0 +1,32 @@
+{
+  "sprint": "CF-HOME-2.9",
+  "release": "CoverageFit v3.20.60",
+  "focusedChecks": 17,
+  "focusedStatus": "passed",
+  "historicalRegressionSuites": 163,
+  "historicalRegressionSuitesPassed": 163,
+  "historicalRegressionStatus": "passed",
+  "assessmentInitialTransferBytes": 470715,
+  "assessmentInitialTransferBudgetBytes": 500000,
+  "performanceStatus": "passed",
+  "certifiedContracts": [
+    "balanced assessment and transition markup",
+    "320 to 1440 CSS-pixel layout safeguards",
+    "short landscape and safe areas",
+    "skip navigation and visible focus",
+    "true property-field labels",
+    "programmatic progress, question changes, selection, and validation",
+    "44 CSS-pixel primary touch targets",
+    "16 CSS-pixel mobile inputs",
+    "reduced motion and forced colors",
+    "scrollable short-screen dialogs",
+    "deferred ordered scripts",
+    "score-field isolation"
+  ],
+  "postDeployEvidenceRequired": [
+    "live transition and assessment smoke test",
+    "physical iOS Safari and Android Chrome",
+    "VoiceOver and NVDA",
+    "production network and runtime performance trace"
+  ]
+}

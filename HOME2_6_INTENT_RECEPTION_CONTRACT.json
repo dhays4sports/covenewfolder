@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "release": "CoverageFit v3.20.57",
+  "build": "CF-HOME-2.6",
+  "senderBuild": "408-HOME-2.6",
+  "acceptedFields": {
+    "home_review_goal": ["farmers_fit", "coverage_fit", "home_auto_bundle", "exploring"],
+    "housing_context": ["owner_occupied", "landlord", "buyer", "renter"],
+    "review_timing": ["shopping_now", "renewal_60", "later", "not_sure"]
+  },
+  "storage": "session-scoped bounded entry-intent context plus the existing private prospect profile",
+  "visibleUrlScrubbed": true,
+  "openingPersonalized": true,
+  "propertyConfirmationCount": 1,
+  "assessmentBeginsImmediatelyAfterPropertyConfirmation": true,
+  "contactAndConsentPreservedInvisibly": true,
+  "completedConsultationRecordIncludesIntent": true,
+  "scorePolicy": {
+    "affectsQuestionSelection": false,
+    "affectsQuestionWeights": false,
+    "affectsAnswerImpacts": false,
+    "affectsProtectionScore": false
+  },
+  "unchanged": {
+    "assessmentQuestions": true,
+    "answerOptions": true,
+    "protectionScoreFormula": true,
+    "recommendationRules": true,
+    "zeroRepeatCompletion": true,
+    "leadDelivery": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "sprint": "408-CRO-1.6.2.1",
+  "name": "Intent Payoff and Promise Alignment",
+  "sender": {
+    "release": "408-CRO-1.6.2.1",
+    "project": "408FARMERS"
+  },
+  "receiver": {
+    "release": "CoverageFit v3.20.53",
+    "project": "CoverageFit"
+  },
+  "intent": "professional_discount_eligibility_review",
+  "customerPromise": "A professional role may qualify for Farmers discounts. The customer receives a broader Protection Snapshot, and Dylan verifies which discounts may be available during quoting and underwriting.",
+  "stages": [
+    "occupational_landing",
+    "professional_intake",
+    "coveragefit_transition",
+    "protection_snapshot_assessment",
+    "completion_delivery",
+    "customer_snapshot",
+    "producer_workspace"
+  ],
+  "automatedEligibilityDecision": false,
+  "discountGuaranteed": false,
+  "verificationOwner": "Dylan Haysbert",
+  "verificationStage": "quoting_and_underwriting",
+  "additionalQuestions": false,
+  "coverageFitAssessmentChanged": false,
+  "protectionScoreChanged": false,
+  "customerLanguageChanged": true,
+  "dashboardTerminologyRemoved": true,
+  "renterHomeAssessmentBlocked": true
+}

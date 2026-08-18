@@ -1,0 +1,14 @@
+{
+  "name": "coveragefit",
+  "version": "3.20.71",
+  "private": true,
+  "description": "CoverageFit RC-SMS-1.9.6 shared-number operations certification with full collision/recovery matrix, pre-port readiness snapshot, D1 compatibility fixtures, and hardened workflow re-entry.",
+  "scripts": {
+    "test": "node RUN_REGRESSION_SUITE.js",
+    "cloudflare:dev": "wrangler pages dev .",
+    "cloudflare:functions:build": "wrangler pages functions build --outdir=.cloudflare/functions-dist"
+  },
+  "devDependencies": {
+    "wrangler": "4.114.0"
+  }
+}

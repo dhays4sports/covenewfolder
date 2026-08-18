@@ -1,0 +1,13 @@
+import fs from 'node:fs'; import assert from 'node:assert/strict';
+const read=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8'); let p=0,f=0;
+const check=(n,v)=>{try{assert.ok(v,n);console.log('PASS',n);p++;}catch(e){console.error('FAIL',n);f++;}};
+const intake=read('./assets/js/prefill-intake.js'), ctx=read('./assets/js/personalization-context.js');
+check('CoverageFit remains compatible after 3.20.28', ['3.20.28','3.20.29','3.20.30','3.20.31','3.20.32','3.20.33','3.20.34','3.20.35','3.20.36','3.20.37','3.20.38','3.20.39','3.20.40','3.20.41','3.20.42','3.20.43','3.20.44','3.20.45','3.20.46','3.20.47','3.20.48','3.20.49','3.20.50','3.20.51','3.20.52','3.20.53','3.20.54','3.20.55','3.20.56','3.20.57','3.20.58','3.20.59','3.20.60'].includes(read('./VERSION').trim()));
+check('prefill accepts review_context first',/params\.get\('review_context'\) \|\| params\.get\('segment'\)/.test(intake));
+check('prefill stores occupation separately',/occupationSegment: clean\(params\.get\('occupation_segment'\)/.test(intake));
+check('prefill stores housing separately',/housingContext: clean\(params\.get\('housing_context'\)/.test(intake));
+check('new semantic params scrubbed from URL',['review_context','home_review_goal','occupation_segment','housing_context','review_timing','segment'].every(field=>intake.slice(intake.indexOf('const PII_KEYS'),intake.indexOf('const MARKER_KEYS')).includes(`'${field}'`)));
+check('personalization keeps occupation',/occupationSegment/.test(ctx)&&/journey: \{[\s\S]*occupationSegment/.test(ctx));
+check('personalization keeps housing',/housingContext/.test(ctx)&&/journey: \{[\s\S]*housingContext/.test(ctx));
+check('legacy segment fallback retained',intake.includes("params.get('segment')"));
+console.log(`FLOW-1.3 receiver: ${p} passed, ${f} failed`); process.exit(f?1:0);

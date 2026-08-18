@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "release": "CoverageFit v3.20.58",
+  "build": "CF-HOME-2.7",
+  "senderBuild": "408-HOME-2.7",
+  "acceptedCampaign": {
+    "family": "home_flyer",
+    "identifier": "home_flyer_{ZIP}_{rate|fit}",
+    "zip": "exactly five digits",
+    "variants": ["rate", "fit"]
+  },
+  "openingAcknowledgesCampaign": true,
+  "completedConsultationRecordIncludesCampaign": true,
+  "campaignRecordContainsPersonalData": false,
+  "scorePolicy": {
+    "affectsQuestionSelection": false,
+    "affectsQuestionWeights": false,
+    "affectsAnswerImpacts": false,
+    "affectsRecommendations": false,
+    "affectsProtectionScore": false
+  },
+  "unchanged": {
+    "homeIntentReception": true,
+    "propertyConfirmationCount": 1,
+    "assessmentQuestions": true,
+    "answerOptions": true,
+    "protectionScoreFormula": true,
+    "zeroRepeatCompletion": true,
+    "contactAndConsentReuse": true,
+    "leadDelivery": true
+  }
+}

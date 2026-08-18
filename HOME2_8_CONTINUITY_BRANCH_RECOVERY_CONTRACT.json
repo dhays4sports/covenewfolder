@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "release": "CoverageFit v3.20.59",
+  "build": "CF-HOME-2.8",
+  "senderBuild": "408-HOME-2.8",
+  "trustedHandoffRecovery": {
+    "profileSources": ["sessionStorage", "localStorage"],
+    "missingTransitionMarkerCanRecover": true,
+    "destination": "/assessment/",
+    "contactReentryRequired": false,
+    "propertyConfirmationCount": 1
+  },
+  "branchRecovery": {
+    "guardWindowMinutes": 30,
+    "renterDestination": "https://408farmers.com/contact/?intent=renters&recovery=coveragefit_branch",
+    "personalDataInRecoveryUrl": false,
+    "ownerOccupiedDestination": "/assessment/",
+    "landlordDestination": "/assessment/",
+    "buyerDestination": "/assessment/"
+  },
+  "assessmentContinuity": {
+    "existingDraftStorageReused": true,
+    "ttlDays": 7,
+    "resumeOrStartOverPreserved": true
+  },
+  "scorePolicy": {
+    "branchAffectsQuestionSelection": false,
+    "recoveryAffectsAnswerImpacts": false,
+    "recoveryAffectsRecommendations": false,
+    "recoveryAffectsProtectionScore": false
+  },
+  "unchanged": {
+    "assessmentQuestions": true,
+    "answerOptions": true,
+    "protectionScoreFormula": true,
+    "zeroRepeatCompletion": true,
+    "leadDelivery": true
+  }
+}

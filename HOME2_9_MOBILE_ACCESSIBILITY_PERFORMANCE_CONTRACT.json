@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "release": "CoverageFit v3.20.60",
+  "build": "CF-HOME-2.9",
+  "senderBuild": "408-HOME-2.9",
+  "routes": ["/transition/", "/assessment/"],
+  "viewportMatrix": [
+    [320, 568],
+    [360, 800],
+    [390, 844],
+    [412, 915],
+    [768, 1024],
+    [1024, 768],
+    [1440, 900]
+  ],
+  "accessibility": {
+    "target": "WCAG 2.2 AA-oriented route contract",
+    "balancedHtml": true,
+    "skipNavigation": true,
+    "propertyControlsLabeled": true,
+    "questionChangesAnnounced": true,
+    "selectionStateExposed": true,
+    "validationConnected": true,
+    "progressProgrammatic": true,
+    "primaryTouchTargetMinimumCssPixels": 44,
+    "mobileInputFontMinimumCssPixels": 16,
+    "reducedMotion": true,
+    "forcedColors": true,
+    "shortScreenDialogsScrollable": true
+  },
+  "performance": {
+    "initialTransferBudgetBytes": 500000,
+    "headerLogo": "/assets/images/coveragefit-logo.svg",
+    "orderedDeferredScripts": true,
+    "runtimeObserverLoopAdded": false,
+    "questionTwoObserverCorrectionPreserved": true
+  },
+  "unchanged": {
+    "handoffRecovery": true,
+    "renterGuard": true,
+    "propertyConfirmationCount": 1,
+    "assessmentDraftDays": 7,
+    "assessmentQuestions": true,
+    "answerOptions": true,
+    "recommendations": true,
+    "protectionScoreFormula": true,
+    "zeroRepeatCompletion": true,
+    "leadDelivery": true
+  },
+  "certificationBoundary": {
+    "liveDeploymentSmokeTest": "post-deploy",
+    "physicalVoiceOverNvdaIosAndroid": "post-deploy"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "release": "CoverageFit v3.20.56",
+  "build": "CF-HOME-2.1",
+  "journeyContract": "home-review-journey-v1",
+  "trustedSender": {
+    "source": "408farmers",
+    "handoffContract": "coveragefit-handoff-v1",
+    "senderBuildPattern": "^408-",
+    "assessment": "home"
+  },
+  "acceptedSemanticFields": [
+    "home_review_goal",
+    "housing_context",
+    "review_timing"
+  ],
+  "receiverEvents": {
+    "assessment_started": "home_assessment_started",
+    "assessment_completed": "home_assessment_completed"
+  },
+  "eventProperties": [
+    "build",
+    "journeyContract",
+    "stage",
+    "assessment",
+    "senderBuild",
+    "leadCaptureStatus",
+    "semanticContextSet"
+  ],
+  "privacy": {
+    "semanticParametersRemovedFromVisibleUrl": true,
+    "identityIncludedInJourneyEvents": false,
+    "contactIncludedInJourneyEvents": false,
+    "propertyIncludedInJourneyEvents": false,
+    "scoreIncludedInJourneyEvents": false
+  },
+  "unchanged": {
+    "assessmentQuestions": true,
+    "answerOptions": true,
+    "protectionScore": true,
+    "recommendations": true,
+    "reportSubmission": true,
+    "zeroRepeatCompletion": true
+  }
+}
