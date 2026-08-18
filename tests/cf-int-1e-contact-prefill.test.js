@@ -1,0 +1,17 @@
+const fs = require('fs');
+const assert = require('assert');
+const html = fs.readFileSync('assessment/index.html','utf8');
+const js = fs.readFileSync('assets/js/contact-prefill.js','utf8');
+const css = fs.readFileSync('assets/css/pilot.css','utf8');
+assert(html.includes('/assets/js/contact-prefill.js'));
+assert(html.includes('autocomplete="name"'));
+assert(js.includes('coveragefit_prospect_profile_v1'));
+assert(js.includes('profile.fullName'));
+assert(js.includes('profile.email'));
+assert(js.includes('profile.phone'));
+assert(js.includes('address.postalCode'));
+assert(js.includes("if (!field || field.value.trim()) return"));
+assert(js.includes('coveragefit:contact-prefill-ready'));
+assert(js.includes('Please confirm it is still correct'));
+assert(css.includes('.contact-prefill-note'));
+console.log('CF-INT-1E tests: 11/11 passed');

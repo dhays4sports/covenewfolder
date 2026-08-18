@@ -1,0 +1,25 @@
+{
+  "record_key": "sms-live-conversations/sms-live-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "data_json": {
+    "id": "sms-live-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "schemaVersion": "1.4",
+    "channel": "ringcentral_sms",
+    "contactPhone": "+14085550222",
+    "businessPhone": "+14085550123",
+    "state": "human_takeover",
+    "preTakeoverState": "home_review_reason_requested",
+    "intent": "home_review",
+    "answers": {"propertyAddress": "Legacy review property"},
+    "transcript": [],
+    "inboundCount": 3,
+    "outboundCount": 3,
+    "createdAt": "2026-07-15T18:00:00.000Z",
+    "updatedAt": "2026-07-15T18:04:00.000Z"
+  },
+  "expect": {
+    "owner": "producer",
+    "automationMode": "human_only",
+    "workflowState": "home_review_reason_requested",
+    "consentStatus": "active"
+  }
+}

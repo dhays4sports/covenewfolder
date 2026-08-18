@@ -1,0 +1,26 @@
+{
+  "record_key": "sms-live-conversations/sms-live-cccccccccccccccccccccccccccccccc",
+  "data_json": {
+    "id": "sms-live-cccccccccccccccccccccccccccccccc",
+    "schemaVersion": "1.5",
+    "channel": "ringcentral_sms",
+    "contactPhone": "+14085550333",
+    "businessPhone": "+14085550123",
+    "state": "opted_out",
+    "preTakeoverState": "bundle_status_requested",
+    "intent": "bundle",
+    "answers": {"propertyAddress": "Legacy bundle property"},
+    "optedOutAt": "2026-08-01T19:00:00.000Z",
+    "transcript": [],
+    "inboundCount": 4,
+    "outboundCount": 4,
+    "createdAt": "2026-08-01T18:55:00.000Z",
+    "updatedAt": "2026-08-01T19:00:00.000Z"
+  },
+  "expect": {
+    "consentStatus": "opted_out",
+    "channelStatus": "opted_out",
+    "automationMode": "suppressed",
+    "workflowState": "bundle_status_requested"
+  }
+}
