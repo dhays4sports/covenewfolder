@@ -1,0 +1,54 @@
+{
+  "sprint": "AW-UI-2.4",
+  "version": "3.20.64",
+  "title": "Sticky Snapshot and Quick Actions",
+  "snapshotFields": [
+    "homeowner",
+    "property",
+    "review reason",
+    "top priority",
+    "consultation status",
+    "recommended next step"
+  ],
+  "quickActions": ["call", "text", "email", "consultation document", "client snapshot"],
+  "sources": {
+    "homeownerContext": "existing active consultation and workspace snapshot",
+    "topPriority": "existing assessment topPriority",
+    "status": "existing consultation disposition stage",
+    "nextStep": "existing CoverageFitConsultationProgress recommended stage",
+    "contactDestinations": "existing selected-customer contact fields",
+    "documentDestination": "existing consultationDocumentHref",
+    "snapshotDestination": "existing customerReportHref"
+  },
+  "behavior": {
+    "wideDesktopSticky": true,
+    "stickyMinimumWidth": 1181,
+    "responsiveDisclosure": true,
+    "smallScreenSticky": false,
+    "availabilityRulesReused": true,
+    "activityLoggingReused": true,
+    "duplicateConsultationRecord": false
+  },
+  "preserved": {
+    "focusMode": true,
+    "consultationProgressModel": true,
+    "checklistPersistence": true,
+    "verificationSemantics": true,
+    "recommendationPersistence": true,
+    "completionPersistence": true,
+    "dispositionAndFollowUp": true,
+    "consultationRecordStore": true,
+    "secureInboxClient": true,
+    "assessmentAndScore": true,
+    "documentAndPrint": true,
+    "smsAndHandoff": true,
+    "cloudflareFunctionsAndD1": true,
+    "rootDeploymentLayout": true
+  },
+  "newStorageKeys": [],
+  "newApiRoutes": [],
+  "deferred": [
+    "AW-UI-2.5 Mobile Agent Console",
+    "AW-UI-2.6 Accessibility and Regression Certification"
+  ]
+}

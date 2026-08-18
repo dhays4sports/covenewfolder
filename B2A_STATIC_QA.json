@@ -1,0 +1,8 @@
+{
+  "qa_json": true,
+  "metadata_fields": true,
+  "report_customer_fields": true,
+  "agent_notes_not_rendered": true,
+  "version": true,
+  "docs": true
+}

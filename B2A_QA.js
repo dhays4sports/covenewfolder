@@ -1,0 +1,25 @@
+const path=require('path');
+const fs=require('fs'),vm=require('vm');
+const context={window:{},console}; context.window.window=context.window;
+vm.createContext(context);
+vm.runInContext(fs.readFileSync(path.join(__dirname,'assets/js/recommendation-engine.js'),'utf8'),context);
+const e=context.window.CoverageFitRecommendationEngine;
+let c=e.createCollector({product:'home'});
+c.add({name:'Umbrella',priority:'high',why:'Assets and household exposure make liability worth reviewing.',trigger:'Homeowner',evidence:['Owns a home'],ruleId:'u1'});
+c.add({name:'Umbrella',priority:'recommended',why:'A youthful driver adds exposure.',trigger:'Teen driver',evidence:['Teen driver'],ruleId:'u2'});
+c.add({name:'Water Damage',priority:'recommended',why:'Water protection is uncertain.',evidence:['No shutoff device'],ruleId:'w1'});
+const out=c.values({enrich:false});
+const checks=[];
+function ok(name,value){checks.push({name,pass:Boolean(value)}); if(!value) throw new Error(name)}
+ok('merged duplicate',out.length===2);
+ok('priority remains strongest',out[0].priority==='high');
+ok('supporting answers merged',out[0].supportingAnswers.length===2);
+ok('rule ids merged',out[0].ruleIds.length===2);
+ok('confidence numeric',Number.isInteger(out[0].confidence)&&out[0].confidence>=0&&out[0].confidence<=97);
+ok('impact high',out[0].impact==='high');
+ok('client explanation',out[0].clientExplanation.length>10);
+ok('conversation starter',out[0].conversationStarter.length>10);
+ok('agent notes hidden-capable payload',out[0].agentNotes.length>10);
+ok('intelligence version',out[0].intelligenceVersion==='4.0-a');
+ok('sorted by priority',out[0].name==='Umbrella');
+console.log(JSON.stringify({passed:checks.length,checks,output:out},null,2));

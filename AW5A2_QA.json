@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "tests": 25,
+  "engineVersion": "0.2.0",
+  "checklistId": "consultation-test-customer-1393vvr",
+  "itemCount": 3,
+  "phaseCount": 2,
+  "regression": {
+    "passed": true,
+    "changedFiles": [
+      "CHANGELOG.md",
+      "ROADMAP.md",
+      "VERSION",
+      "agent/workspace/index.html",
+      "assets/js/agent-workspace.js",
+      "assets/js/consultation-checklist.js"
+    ],
+    "addedFiles": [
+      "AW5A2_QA.js",
+      "AW5A2_QA.json",
+      "SPRINT-AW-5A.2.md"
+    ],
+    "removedFiles": [],
+    "protectedFilesUnchanged": [
+      "assets/js/assessment-engine.js",
+      "assets/js/recommendation-engine.js",
+      "assets/js/home-recommendation-rules.js",
+      "assets/js/report-engine.js",
+      "assets/js/executive-report-engine.js",
+      "assets/js/property-intelligence.js",
+      "assets/js/property-confirmation.js",
+      "assets/js/attribution.js",
+      "assessment/index.html",
+      "home/report/index.html"
+    ]
+  }
+}

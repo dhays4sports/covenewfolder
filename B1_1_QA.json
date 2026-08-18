@@ -1,0 +1,11 @@
+{
+  "version": "3.6.1",
+  "sprint": "B.1.1",
+  "checks": {
+    "attribution_module_exists": true,
+    "all_html_load_receiver": true,
+    "assessment_payload_includes_attribution": true,
+    "analytics_includes_attribution": true,
+    "contract_exists": true
+  }
+}

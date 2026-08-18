@@ -1,0 +1,116 @@
+{
+  "passed": 11,
+  "checks": [
+    {
+      "name": "merged duplicate",
+      "pass": true
+    },
+    {
+      "name": "priority remains strongest",
+      "pass": true
+    },
+    {
+      "name": "supporting answers merged",
+      "pass": true
+    },
+    {
+      "name": "rule ids merged",
+      "pass": true
+    },
+    {
+      "name": "confidence numeric",
+      "pass": true
+    },
+    {
+      "name": "impact high",
+      "pass": true
+    },
+    {
+      "name": "client explanation",
+      "pass": true
+    },
+    {
+      "name": "conversation starter",
+      "pass": true
+    },
+    {
+      "name": "agent notes hidden-capable payload",
+      "pass": true
+    },
+    {
+      "name": "intelligence version",
+      "pass": true
+    },
+    {
+      "name": "sorted by priority",
+      "pass": true
+    }
+  ],
+  "output": [
+    {
+      "name": "Umbrella",
+      "priority": "high",
+      "why": "Assets and household exposure make liability worth reviewing. A youthful driver adds exposure.",
+      "trigger": "Homeowner · Teen driver",
+      "evidence": [
+        "Owns a home",
+        "Teen driver"
+      ],
+      "ruleId": "u2",
+      "priorityLabel": "High Priority Review",
+      "whyParts": [
+        "Assets and household exposure make liability worth reviewing.",
+        "A youthful driver adds exposure."
+      ],
+      "triggerParts": [
+        "Homeowner",
+        "Teen driver"
+      ],
+      "supportingAnswers": [
+        "Owns a home",
+        "Teen driver"
+      ],
+      "ruleIds": [
+        "u1",
+        "u2"
+      ],
+      "product": "home",
+      "impact": "high",
+      "impactLabel": "High impact",
+      "confidence": 84,
+      "clientExplanation": "A youthful driver adds exposure.",
+      "conversationStarter": "Let's confirm how umbrella is addressed and whether anything should be updated.",
+      "agentNotes": "Confirm current limits, deductibles, endorsements, and household details before making a recommendation about umbrella. Tie the discussion back to: Teen driver.",
+      "intelligenceVersion": "4.0-a"
+    },
+    {
+      "name": "Water Damage",
+      "priority": "recommended",
+      "why": "Water protection is uncertain.",
+      "evidence": [
+        "No shutoff device"
+      ],
+      "ruleId": "w1",
+      "priorityLabel": "Recommended Discussion",
+      "whyParts": [
+        "Water protection is uncertain."
+      ],
+      "trigger": "",
+      "triggerParts": [],
+      "supportingAnswers": [
+        "No shutoff device"
+      ],
+      "ruleIds": [
+        "w1"
+      ],
+      "product": "home",
+      "impact": "moderate",
+      "impactLabel": "Moderate impact",
+      "confidence": 69,
+      "clientExplanation": "Water protection is uncertain.",
+      "conversationStarter": "Let's confirm how water damage is addressed and whether anything should be updated.",
+      "agentNotes": "Confirm current limits, deductibles, endorsements, and household details before making a recommendation about water damage. Tie the discussion back to: No shutoff device.",
+      "intelligenceVersion": "4.0-a"
+    }
+  ]
+}

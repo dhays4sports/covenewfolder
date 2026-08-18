@@ -1,0 +1,24 @@
+{
+  "sprint": "AW-UI-2.1",
+  "version": "3.20.61",
+  "title": "Simplified Workspace Architecture",
+  "workspaceRoute": "/agent/workspace/",
+  "architecture": {
+    "primaryViews": ["Consultation", "Inbox", "Pipeline"],
+    "orientationStages": ["Prepare", "Verify", "Discuss", "Recommend", "Close"],
+    "secondaryTools": ["SMS Simulator", "Refresh workspace", "Consultation Document", "Client Snapshot"],
+    "progressiveDisclosures": ["Workspace tools", "Conversation readiness", "Homeowner document", "Existing detailed workspace disclosures"]
+  },
+  "preserved": {
+    "dynamicElementIds": true,
+    "consultationAPIs": true,
+    "storageKeys": true,
+    "assessmentAndScore": true,
+    "recommendationAndCompletion": true,
+    "secureInboxAndPipeline": true,
+    "consultationDocumentAndPrint": true,
+    "flowAndSmsArchitecture": true,
+    "cloudflareRootDeployment": true
+  },
+  "deferred": ["AW-UI-2.2 Inbox-First Agent Navigation", "AW-UI-2.3 Guided Consultation Focus Mode", "AW-UI-2.4 Sticky Snapshot and Quick Actions", "AW-UI-2.5 Mobile Agent Console", "AW-UI-2.6 Accessibility and Regression Certification"]
+}

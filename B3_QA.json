@@ -1,0 +1,15 @@
+{
+  "passed": 9,
+  "total": 9,
+  "checks": {
+    "snapshot_mount": true,
+    "script_loaded": true,
+    "style_loaded": true,
+    "category_source": true,
+    "recommendation_engine": true,
+    "analytics_event": true,
+    "reduced_motion": true,
+    "print_support": true,
+    "version": true
+  }
+}

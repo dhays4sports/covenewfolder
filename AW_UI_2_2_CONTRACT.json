@@ -1,0 +1,32 @@
+{
+  "sprint": "AW-UI-2.2",
+  "version": "3.20.62",
+  "title": "Inbox-First Agent Navigation",
+  "defaultView": "inbox",
+  "directConsultationParameter": "consultation_id",
+  "viewOrder": ["inbox", "consultation", "pipeline"],
+  "quickFilters": {
+    "all": "Every record in the existing consultation list",
+    "attention": "Existing new delivery status or existing overdue/due-today follow-up state",
+    "new": "Existing remote delivery status equals new",
+    "today": "Existing scheduled follow-up is due today"
+  },
+  "rowFields": ["homeowner identity", "review reason", "property", "received time", "delivery status", "consultation stage", "follow-up state", "primary action"],
+  "preserved": {
+    "consultationRecordStore": true,
+    "activeConsultationKey": true,
+    "secureInboxClient": true,
+    "openedAndAcknowledgedState": true,
+    "searchAndExistingFilters": true,
+    "pipelineAndDateReporting": true,
+    "assessmentAndScore": true,
+    "recommendationAndCompletion": true,
+    "documentAndPrint": true,
+    "smsAndHandoff": true,
+    "cloudflareFunctionsAndD1": true,
+    "rootDeploymentLayout": true
+  },
+  "newStorageKeys": [],
+  "newApiRoutes": [],
+  "deferred": ["AW-UI-2.3 Guided Consultation Focus Mode", "AW-UI-2.4 Sticky Snapshot and Quick Actions", "AW-UI-2.5 Mobile Agent Console", "AW-UI-2.6 Accessibility and Regression Certification"]
+}

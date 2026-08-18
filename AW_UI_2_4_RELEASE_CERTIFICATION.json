@@ -1,0 +1,28 @@
+{
+  "sprint": "AW-UI-2.4",
+  "version": "3.20.64",
+  "status": "certified",
+  "certifiedAt": "2026-08-15",
+  "results": {
+    "AW_UI_2_4_QA": "42/42 passed",
+    "AW_UI_2_3_QA": "40/40 passed",
+    "AW_UI_2_2_QA": "37/37 passed",
+    "AW_UI_2_1_QA": "26/26 passed",
+    "STATIC_RELEASE_QA": "16/16 passed",
+    "WR1C2_DEPLOYMENT_QA": "83/83 passed",
+    "WR1C6_API_BASELINE_QA": "36/36 passed",
+    "javascriptSyntax": "passed",
+    "rootArchiveValidation": "passed"
+  },
+  "unchangedFromCertified32063Baseline": [
+    "functions/",
+    "server/",
+    "migrations/",
+    "assets/js/consultation-progress.js",
+    "assets/js/consultation-checklist.js",
+    "assets/js/recommendation-builder.js",
+    "assets/js/consultation-completion.js"
+  ],
+  "cloudflareBuildNote": "All Cloudflare Functions, server modules, and migrations are byte-for-byte unchanged from the successfully compiled 3.20.63 baseline; the 83-check deployment suite and 36-check frozen API baseline passed.",
+  "releaseBoundary": "Derived sticky snapshot and existing quick-action aliases only; no new customer record, storage key, API route, D1 migration, or server mutation."
+}

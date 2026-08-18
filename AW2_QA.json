@@ -1,0 +1,39 @@
+{
+  "sprint": "AW-2",
+  "version": "3.11.1",
+  "status": "pass",
+  "checks": {
+    "version_is_3_11_1": true,
+    "workspace_adapter_exists": true,
+    "workspace_loads_adapter_before_renderer": true,
+    "renderer_uses_shared_adapter": true,
+    "renderer_no_raw_report_key": true,
+    "adapter_has_versioned_schema": true,
+    "adapter_has_subscription": true,
+    "sprint_doc_exists": true,
+    "changelog_updated": true,
+    "roadmap_updated": true,
+    "protected_files_unchanged": true
+  },
+  "protected_file_comparison": {
+    "assets/js/assessment-engine.js": true,
+    "assets/js/recommendation-engine.js": true,
+    "assets/js/home-recommendation-rules.js": true,
+    "assets/js/report-engine.js": true,
+    "assets/js/executive-report-engine.js": true,
+    "assets/js/property-intelligence.js": true,
+    "assets/js/property-confirmation.js": true,
+    "assets/js/attribution.js": true,
+    "assessment/index.html": true,
+    "home/report/index.html": true
+  },
+  "tests": [
+    "node --check assets/js/workspace-data.js",
+    "node --check assets/js/agent-workspace.js",
+    "node AW2_QA.js"
+  ],
+  "notes": [
+    "The adapter is read-only and does not write report or property storage.",
+    "The workspace presentation remains on the AW-1 route and now consumes only the shared adapter."
+  ]
+}

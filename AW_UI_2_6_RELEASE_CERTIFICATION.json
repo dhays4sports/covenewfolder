@@ -1,0 +1,41 @@
+{
+  "sprint": "AW-UI-2.6",
+  "version": "3.20.66",
+  "status": "certified",
+  "decision": "approved_for_controlled_production",
+  "certifiedAt": "2026-08-15",
+  "results": {
+    "AW_UI_2_6_QA": "60/60 passed",
+    "AW_UI_2_5_QA": "49/49 passed",
+    "AW_UI_2_4_QA": "42/42 passed",
+    "AW_UI_2_3_QA": "40/40 passed",
+    "AW_UI_2_2_QA": "37/37 passed",
+    "AW_UI_2_1_QA": "26/26 passed",
+    "WR1C3_CROSS_BROWSER_QA": "19/19 passed",
+    "STATIC_RELEASE_QA": "16/16 passed",
+    "WR1C2_DEPLOYMENT_QA": "83/83 passed",
+    "WR1C6_API_BASELINE_QA": "36/36 passed",
+    "javascriptSyntax": "passed",
+    "protectedBackendEquivalence": "passed",
+    "secretHygiene": "passed",
+    "rootArchiveValidation": "passed"
+  },
+  "historicalAggregate": {
+    "baseline": "97/168 passed; 71 pre-existing failures",
+    "candidate": "98/169 passed; 71 pre-existing failures",
+    "newFailures": 0,
+    "note": "The added AW_UI_2_6_QA suite passed; retained failures are unchanged historical milestone tests dominated by obsolete exact-version assertions."
+  },
+  "unchangedFromCertified32065Baseline": [
+    "functions/",
+    "server/",
+    "migrations/",
+    "assets/js/consultation-progress.js",
+    "assets/js/consultation-checklist.js",
+    "assets/js/recommendation-builder.js",
+    "assets/js/consultation-completion.js"
+  ],
+  "cloudflareBuildNote": "The protected backend surface is byte-for-byte identical to the successfully compiled 3.20.65 Cloudflare Pages baseline. The local certification container did not expose a Wrangler executable; no fresh local compile is claimed. The 83-check deployment suite and 36-check frozen API baseline passed.",
+  "accessibilityBoundary": "WCAG 2.2 AA source and interaction safeguards are certified. Physical Safari/VoiceOver, macOS keyboard/zoom, Windows screen-reader, and production-network walkthroughs remain post-deploy operational evidence; universal assistive-technology certification is not claimed.",
+  "releaseBoundary": "Workspace markup, focus, keyboard, contrast, motion, forced-colors, and zoom-reflow corrections only; no new storage key, API route, D1 migration, or server mutation."
+}

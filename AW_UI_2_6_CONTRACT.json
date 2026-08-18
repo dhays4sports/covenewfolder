@@ -1,0 +1,62 @@
+{
+  "sprint": "AW-UI-2.6",
+  "version": "3.20.66",
+  "title": "Accessibility and Regression Certification",
+  "decision": "approved_for_controlled_production",
+  "accessibilityTarget": "WCAG 2.2 AA source and interaction safeguards",
+  "certified": {
+    "keyboardNavigation": true,
+    "structurallyBalancedWorkspaceMarkup": true,
+    "focusVisibility": true,
+    "focusTransferAcrossHiddenViews": true,
+    "screenReaderSemanticsReview": true,
+    "nativeDisclosureSemantics": true,
+    "liveRegionReview": true,
+    "formLabelReview": true,
+    "contrastSafeguards": true,
+    "increasedContrastPreference": true,
+    "reducedMotion": true,
+    "forcedColors": true,
+    "zoomReflowTo400Percent": true,
+    "narrowPhoneThroughDesktopSourceMatrix": true,
+    "safariFallbackCompatibility": true,
+    "rootDeployment": true,
+    "secretHygiene": true,
+    "protectedBackendEquivalence": true
+  },
+  "browserBaseline": {
+    "safariMacOS": "16.4+ source and fallback compatible",
+    "safariIOSAndIPadOS": "16.4+ source, responsive, safe-area, and fallback compatible",
+    "chromium": "current evergreen source compatible",
+    "firefox": "current and current ESR source compatible",
+    "edge": "current evergreen source compatible"
+  },
+  "postDeployOperationalEvidence": [
+    "Physical iPhone and iPad Safari walkthrough with VoiceOver",
+    "macOS Safari keyboard and zoom walkthrough",
+    "Windows NVDA or JAWS walkthrough",
+    "Production network, Cloudflare binding, and runtime smoke test"
+  ],
+  "preserved": {
+    "assessmentQuestions": true,
+    "protectionScore": true,
+    "consultationProgressModel": true,
+    "focusModeStateBoundary": true,
+    "checklistPersistence": true,
+    "recommendationPersistence": true,
+    "completionPersistence": true,
+    "dispositionAndFollowUp": true,
+    "consultationRecordStore": true,
+    "secureInboxClient": true,
+    "pipeline": true,
+    "documentsAndPrint": true,
+    "smsAndHandoff": true,
+    "cloudflareFunctionsAndD1": true,
+    "rootDeploymentLayout": true
+  },
+  "newStorageKeys": [],
+  "newApiRoutes": [],
+  "newDatabaseMigrations": [],
+  "openCodeBlockers": [],
+  "universalAssistiveTechnologyClaim": false
+}

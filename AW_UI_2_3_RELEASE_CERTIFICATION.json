@@ -1,0 +1,27 @@
+{
+  "sprint": "AW-UI-2.3",
+  "version": "3.20.63",
+  "status": "certified",
+  "certifiedAt": "2026-08-15",
+  "results": {
+    "AW_UI_2_3_QA": "40/40 passed",
+    "AW_UI_2_2_QA": "37/37 passed",
+    "AW_UI_2_1_QA": "26/26 passed",
+    "STATIC_RELEASE_QA": "16/16 passed",
+    "WR1C2_DEPLOYMENT_QA": "83/83 passed",
+    "WR1C6_API_BASELINE_QA": "36/36 passed",
+    "javascriptSyntax": "passed",
+    "rootArchiveValidation": "passed"
+  },
+  "unchangedFromCertified32062Baseline": [
+    "functions/",
+    "server/",
+    "migrations/",
+    "assets/js/consultation-progress.js",
+    "assets/js/consultation-checklist.js",
+    "assets/js/recommendation-builder.js",
+    "assets/js/consultation-completion.js"
+  ],
+  "cloudflareBuildNote": "The local Wrangler package was unavailable in the restricted certification workspace. All Cloudflare Functions, server modules, and migrations are byte-for-byte unchanged from the successfully compiled 3.20.62 baseline; the 83-check deployment suite and 36-check frozen API baseline passed.",
+  "releaseBoundary": "Presentation-only consultation Focus Mode; no new storage key, API route, D1 migration, or server mutation."
+}

@@ -1,0 +1,18 @@
+{
+  "version": "3.10.0",
+  "sprint": "B.4B",
+  "status": "passed_with_environment_limit",
+  "checks": {
+    "property_confirmation_section": true,
+    "required_address_fields": true,
+    "saved_profile_prefill": true,
+    "editable_property_fields": true,
+    "quality_indicator": true,
+    "partial_profile_path": true,
+    "zip_contact_prefill": true,
+    "property_payload_preserved": true,
+    "js_syntax": true,
+    "html_integration": true,
+    "browser_runtime": "not_executed_localhost_blocked"
+  }
+}

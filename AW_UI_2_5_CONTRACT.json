@@ -1,0 +1,47 @@
+{
+  "sprint": "AW-UI-2.5",
+  "version": "3.20.65",
+  "title": "Mobile Agent Console",
+  "mobileBreakpoint": 900,
+  "compactPhoneBreakpoint": 640,
+  "narrowPhoneBreakpoint": 360,
+  "primaryDockActions": ["call", "text", "current consultation stage", "more"],
+  "moreActions": ["email", "consultation document", "client snapshot", "return to inbox"],
+  "behavior": {
+    "bottomActionDock": true,
+    "safeAreaInsets": true,
+    "compactHomeownerContext": true,
+    "swipeableStageNavigation": true,
+    "selectedStageAutoCentering": true,
+    "minimumTouchTarget": 44,
+    "minimumFormFontSize": 16,
+    "shortLandscapeMode": true,
+    "boundedActionSheet": true,
+    "guardrailsRemainVisible": true,
+    "actionAvailabilityRulesReused": true,
+    "newMobileStatePersistence": false
+  },
+  "preserved": {
+    "inboxFirstNavigation": true,
+    "focusMode": true,
+    "stickyDesktopSnapshot": true,
+    "consultationProgressModel": true,
+    "checklistPersistence": true,
+    "verificationSemantics": true,
+    "recommendationPersistence": true,
+    "completionPersistence": true,
+    "dispositionAndFollowUp": true,
+    "consultationRecordStore": true,
+    "secureInboxClient": true,
+    "assessmentAndScore": true,
+    "documentAndPrint": true,
+    "smsAndHandoff": true,
+    "cloudflareFunctionsAndD1": true,
+    "rootDeploymentLayout": true
+  },
+  "newStorageKeys": [],
+  "newApiRoutes": [],
+  "deferred": [
+    "AW-UI-2.6 Accessibility and Regression Certification"
+  ]
+}

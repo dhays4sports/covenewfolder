@@ -1,0 +1,27 @@
+{
+  "version": "3.11.2",
+  "planner_script_loaded": true,
+  "planner_before_renderer": true,
+  "workspace_plan_wired": true,
+  "event_wired": true,
+  "html_parse": true,
+  "protected_files_unchanged": true,
+  "protected_file_results": {
+    "assets/js/assessment-engine.js": true,
+    "assets/js/recommendation-engine.js": true,
+    "assets/js/home-recommendation-rules.js": true,
+    "assets/js/report-engine.js": true,
+    "assets/js/executive-report-engine.js": true,
+    "assets/js/property-intelligence.js": true,
+    "assets/js/property-confirmation.js": true,
+    "assets/js/attribution.js": true,
+    "assessment/index.html": true,
+    "home/report/index.html": true
+  },
+  "node_planner_qa": true,
+  "node_planner_syntax": true,
+  "node_renderer_syntax": true,
+  "customer_routes_present": true,
+  "documentation_present": true,
+  "passed": true
+}

@@ -1,0 +1,69 @@
+{
+  "version": "3.11.6-AW5A3",
+  "sprint": "AW-5A.3 Persistent Checklist State",
+  "automated_tests": {
+    "command": "node AW5A3_QA.js",
+    "passed": 14,
+    "failed": 0
+  },
+  "syntax_checks": [
+    "assets/js/consultation-checklist.js",
+    "assets/js/agent-workspace.js"
+  ],
+  "integration_checks": {
+    "workspace_uses_restoreFromPlan": true,
+    "checklist_script_loaded": true,
+    "no_checklist_ui_added": true
+  },
+  "protected_files": {
+    "assets/js/assessment-engine.js": {
+      "baseline_sha256": "c5d04b125132ef4f03e38e5ab82f8ea1b440b30f2870e3fa8e255906c13eeab0",
+      "output_sha256": "c5d04b125132ef4f03e38e5ab82f8ea1b440b30f2870e3fa8e255906c13eeab0",
+      "unchanged": true
+    },
+    "assets/js/recommendation-engine.js": {
+      "baseline_sha256": "0d5973be5455d416c8f2477ce08f327adff0fff91bdb987efe62c6e8e8e6fe18",
+      "output_sha256": "0d5973be5455d416c8f2477ce08f327adff0fff91bdb987efe62c6e8e8e6fe18",
+      "unchanged": true
+    },
+    "assets/js/home-recommendation-rules.js": {
+      "baseline_sha256": "8a43840ebea66f93edb6f28b7f9a57b6adef70dc406d3b7025329a4363d8ef27",
+      "output_sha256": "8a43840ebea66f93edb6f28b7f9a57b6adef70dc406d3b7025329a4363d8ef27",
+      "unchanged": true
+    },
+    "assets/js/report-engine.js": {
+      "baseline_sha256": "bf703cee82c59ee51694190e6508c73d9ba419453099b4d8b934dada139c6aaa",
+      "output_sha256": "bf703cee82c59ee51694190e6508c73d9ba419453099b4d8b934dada139c6aaa",
+      "unchanged": true
+    },
+    "assets/js/executive-report-engine.js": {
+      "baseline_sha256": "be33e6e3603e3795fd9a9a069e895758c8e6efd102d4b5e875bfb3d4d528e22b",
+      "output_sha256": "be33e6e3603e3795fd9a9a069e895758c8e6efd102d4b5e875bfb3d4d528e22b",
+      "unchanged": true
+    },
+    "assets/js/property-intelligence.js": {
+      "baseline_sha256": "57d2fba50afad45dda6290787eb4a4ba8e7912fcf044419eb59423eb88164325",
+      "output_sha256": "57d2fba50afad45dda6290787eb4a4ba8e7912fcf044419eb59423eb88164325",
+      "unchanged": true
+    },
+    "assets/js/property-confirmation.js": {
+      "baseline_sha256": "159002bed4ee7c8a06442ddaa1e699b6af676f2ebcdb801466aef0fc10d0ca00",
+      "output_sha256": "159002bed4ee7c8a06442ddaa1e699b6af676f2ebcdb801466aef0fc10d0ca00",
+      "unchanged": true
+    },
+    "assets/js/attribution.js": {
+      "baseline_sha256": "f53133d19364596b6d263b2d6bc6b80e3f4930d7f3649abe4b0828c918609357",
+      "output_sha256": "f53133d19364596b6d263b2d6bc6b80e3f4930d7f3649abe4b0828c918609357",
+      "unchanged": true
+    },
+    "home/report/index.html": {
+      "baseline_sha256": "f43a2556a5bdb480fe056d673ac4ac65a70560df7b06b739d3e18a76b1a37a84",
+      "output_sha256": "f43a2556a5bdb480fe056d673ac4ac65a70560df7b06b739d3e18a76b1a37a84",
+      "unchanged": true
+    }
+  },
+  "all_protected_unchanged": true,
+  "limitations": [
+    "No checklist UI was added by design. Live browser interaction is deferred to the UI sprint."
+  ]
+}

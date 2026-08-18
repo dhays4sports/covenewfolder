@@ -1,0 +1,46 @@
+{
+  "sprint": "AW-UI-2.3",
+  "version": "3.20.63",
+  "title": "Guided Consultation Focus Mode",
+  "defaultMode": "focus",
+  "stageOrder": ["understand", "verify", "discuss", "recommend", "decide", "next-step"],
+  "stageSource": "CoverageFitConsultationProgress",
+  "behavior": {
+    "oneStageAtATime": true,
+    "fullRecordToggle": true,
+    "previousAndNextNavigation": true,
+    "recommendedStageReturn": true,
+    "completionAndAttentionVisible": true,
+    "viewOnlyStageSelection": true,
+    "recordMutationFromNavigation": false
+  },
+  "progressiveDisclosure": [
+    "conversation readiness",
+    "contact and review details",
+    "property details",
+    "homeowner document story",
+    "recommendation explanation coaching"
+  ],
+  "preserved": {
+    "consultationProgressModel": true,
+    "checklistPersistence": true,
+    "verificationSemantics": true,
+    "recommendationPersistence": true,
+    "completionPersistence": true,
+    "dispositionAndFollowUp": true,
+    "consultationRecordStore": true,
+    "secureInboxClient": true,
+    "assessmentAndScore": true,
+    "documentAndPrint": true,
+    "smsAndHandoff": true,
+    "cloudflareFunctionsAndD1": true,
+    "rootDeploymentLayout": true
+  },
+  "newStorageKeys": [],
+  "newApiRoutes": [],
+  "deferred": [
+    "AW-UI-2.4 Sticky Snapshot and Quick Actions",
+    "AW-UI-2.5 Mobile Agent Console",
+    "AW-UI-2.6 Accessibility and Regression Certification"
+  ]
+}
