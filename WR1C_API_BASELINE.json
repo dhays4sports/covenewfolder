@@ -1,0 +1,55 @@
+{
+  "baselineVersion": "3.15.7",
+  "status": "frozen",
+  "scope": "Agent Workspace compatibility baseline",
+  "modules": {
+    "CoverageFitWorkspaceData": {
+      "version": "1.0.0",
+      "schemaVersion": "1.0",
+      "publicMembers": ["VERSION", "SCHEMA_VERSION", "REPORT_KEY", "PROPERTY_KEY", "getSnapshot", "subscribe"],
+      "storageKeys": ["coveragefit_home_report", "coveragefit_property_profile_v1"],
+      "readyEvent": "coveragefit:workspace-data-ready",
+      "refreshEvent": "coveragefit:workspace-data-refresh"
+    },
+    "CoverageFitConversationPlanner": {
+      "version": "1.0.0",
+      "schemaVersion": "1.0",
+      "publicMembers": ["VERSION", "SCHEMA_VERSION", "getPlan"],
+      "readyEvent": "coveragefit:conversation-planner-ready"
+    },
+    "CoverageFitConsultationChecklist": {
+      "version": "0.5.0",
+      "schemaVersion": "1.0",
+      "storageSchemaVersion": "1.0",
+      "storagePrefix": "coveragefit.workspace.checklist",
+      "statuses": ["pending", "active", "complete"],
+      "events": {
+        "engineReady": "coveragefit:consultation-checklist-engine-ready",
+        "ready": "coveragefit:consultation-checklist-ready",
+        "change": "coveragefit:consultation-checklist-change",
+        "reset": "coveragefit:consultation-checklist-reset"
+      },
+      "publicMembers": ["VERSION", "SCHEMA_VERSION", "STORAGE_SCHEMA_VERSION", "STORAGE_PREFIX", "STATUS", "EVENTS", "createEmpty", "createItem", "generateFromPlan", "restoreFromPlan", "save", "setStatus", "activate", "complete", "reopen", "reset", "resetItem", "resetPhase", "clear", "getSnapshot", "getStorageKey", "validateItem", "validateChecklist", "diagnostics", "getSummary", "getProgress", "getRemainingMinutes", "getWorkspaceState"],
+      "workspaceStateFields": ["checklist", "summary", "diagnostics", "progress", "currentPhase", "remainingMinutes", "plannerVersion", "version"]
+    },
+    "CoverageFitWorkspaceMotion": {
+      "version": "0.2.0",
+      "publicMembers": ["VERSION", "REDUCED_MOTION_QUERY", "prefersReducedMotion", "getDuration", "nextFrame", "wait", "onPreferenceChange", "cancelClassCleanup", "scheduleClassCleanup", "restartClass"]
+    },
+    "CoverageFitAgentWorkspacePerformance": {
+      "version": "1.0.0",
+      "publicMembers": ["version", "getSnapshot", "reset"]
+    },
+    "CoverageFitAgentWorkspaceLifecycle": {
+      "version": "1.0.0",
+      "publicMembers": ["version", "getSnapshot", "teardown"],
+      "snapshotFields": ["disposed", "listeners", "subscriptions", "teardowns", "pendingTimers"]
+    }
+  },
+  "compatibilityPolicy": {
+    "patch": "May fix defects without removing or renaming frozen members or changing schemas.",
+    "minor": "May add optional fields, events, or methods; existing behavior remains compatible.",
+    "major": "Required for removals, renames, persistence incompatibility, or required-field semantic changes.",
+    "deprecation": "Deprecated members remain supported for at least one minor release and must be documented before removal."
+  }
+}

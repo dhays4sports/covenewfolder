@@ -1,0 +1,22 @@
+const fs = require('fs');
+const path = require('path');
+const root = __dirname;
+const js = fs.readFileSync(path.join(root, 'assets/js/agent-workspace.js'), 'utf8');
+const css = fs.readFileSync(path.join(root, 'agent/workspace/workspace.css'), 'utf8');
+const version = fs.readFileSync(path.join(root, 'VERSION'), 'utf8').trim();
+const checks = [];
+function check(name, condition) { if (!condition) throw new Error('FAIL: ' + name); checks.push(name); }
+check('version compatible', (() => { const [a,b,c]=version.split('.').map(Number); return a>3 || (a===3 && (b>14 || (b===14 && c>=6))); })());
+check('timeline state snapshot exists', js.includes('captureTimelineMotionState'));
+check('timeline motion helper exists', js.includes('applyTimelineMotion'));
+check('progress state snapshot exists', js.includes('captureProgressMotionState'));
+check('progress motion helper exists', js.includes('applyProgressMotion'));
+check('current timeline motion class exists', js.includes('conversation-timeline__item--motion-current'));
+check('complete timeline motion class exists', js.includes('conversation-timeline__item--motion-complete'));
+check('progress motion class exists', js.includes('checklist-progress--motion-update'));
+check('smooth current-topic positioning exists', js.includes("behavior: reduced ? 'auto' : 'smooth'"));
+check('shared motion helper used', js.includes('CoverageFitWorkspaceMotion'));
+check('timeline keyframes exist', css.includes('@keyframes workspace-timeline-current'));
+check('progress keyframes exist', css.includes('@keyframes workspace-progress-update'));
+check('reduced motion safeguard exists', css.includes('@media (prefers-reduced-motion: reduce)'));
+console.log(`WR-1B.4.3 QA passed: ${checks.length} checks`);

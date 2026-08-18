@@ -1,0 +1,22 @@
+const fs = require('fs');
+const path = require('path');
+const root = __dirname;
+const js = fs.readFileSync(path.join(root, 'assets/js/agent-workspace.js'), 'utf8');
+const css = fs.readFileSync(path.join(root, 'agent/workspace/workspace.css'), 'utf8');
+const version = fs.readFileSync(path.join(root, 'VERSION'), 'utf8').trim();
+const checks = [];
+function check(name, condition) { if (!condition) throw new Error('FAIL: ' + name); checks.push(name); }
+check('version advanced', (() => { const [a,b,c]=version.split('.').map(Number); return a>3 || (a===3 && (b>14 || (b===14 && c>=7))); })());
+check('loading exit state exists', js.includes("loading.classList?.add?.('is-leaving')"));
+check('loading cleanup exists', js.includes("loading.classList?.remove?.('is-leaving')"));
+check('workspace surface motion helper exists', js.includes('function animateWorkspaceSurfaces'));
+check('workspace entering class applied', js.includes('workspace-layout--entering'));
+check('sidebar toggle motion exists', js.includes('checklist-sidebar--motion-toggle'));
+check('inline state motion exists', js.includes('workspace-surface--motion-enter'));
+check('loading transition styles exist', css.includes('.workspace-loading.is-leaving'));
+check('surface arrival keyframes exist', css.includes('@keyframes workspace-surface-arrive'));
+check('state arrival keyframes exist', css.includes('@keyframes workspace-state-arrive'));
+check('mobile sidebar transition exists', css.includes('max-height var(--duration-normal)'));
+check('reduced motion safeguard exists', css.includes('@media (prefers-reduced-motion: reduce)'));
+check('native reset confirmation preserved', js.includes('window.confirm(message)'));
+console.log(`WR-1B.4.4 QA passed: ${checks.length} checks`);
